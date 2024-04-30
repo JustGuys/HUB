@@ -6,12 +6,7 @@ local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, 
     Name = "Arsenal",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
-   })
    
-   local Tab = Window:MakeTab({
-	Name = "Aimbot",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
 
     Tab:AddButton({
         Name = "Aimbot",
@@ -33,6 +28,9 @@ local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, 
             loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/No%20Recoil"))();
           end    
     })
+
+
+})
 
 
 

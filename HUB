@@ -92,4 +92,24 @@ local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, 
    })
 
 
+   local OtherTab = Window:MakeTab({
+    Name = "Combat Warriors",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+   })
+   
+   local Section = OtherTab:AddSection({
+    Name = "Main"
+   })
+   
+   
+   OtherTab:AddButton({
+    Name = "Gui 1 ",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/bloxfruits/main/main"))()
+    end    
+   })
+
+
+
 OrionLib:Init()

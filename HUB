@@ -1,40 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "GuysModz"})
 
-
-    local PlayerTab = Window:MakeTab({
-    Name = "Arsenal",
-    Icon = "rbxassetid://4483345998",
-    PremiumOnly = false
-   
-
-    Tab:AddButton({
-        Name = "Aimbot",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/Aimbot"))();
-          end    
-    })
-    
-    Tab:AddButton({
-        Name = "Esp",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/Esp"))();
-          end    
-    })
-
-    Tab:AddButton({
-        Name = "No Recoil",
-        Callback = function()
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/No%20Recoil"))();
-          end    
-    })
-
-
-})
-
-
-
-   --other tab
+--other tab
    
    local OtherTab = Window:MakeTab({
     Name = "pet simulator 99",
@@ -90,4 +57,39 @@ local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, 
    })
 
 
-   OrionLib:Init()
+
+
+   local OtherTab = Window:MakeTab({
+    Name = " Arsenal",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+   })
+   
+   local Section = OtherTab:AddSection({
+    Name = "Main"
+   })
+   
+   
+   OtherTab:AddButton({
+    Name = "Aimbot",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/Aimbot"))()
+    end    
+   })
+
+   OtherTab:AddButton({
+    Name = "Esp",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/Esp"))()
+      end    
+   })
+ 
+   OtherTab:AddButton({
+    Name = "No Recoil",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/ArsenalScript/main/No%20Recoil"))()
+      end    
+   })
+
+
+OrionLib:Init()

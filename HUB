@@ -112,4 +112,25 @@ local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, 
 
 
 
+   local OtherTab = Window:MakeTab({
+    Name = "Million Tycoon",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+   })
+   
+   local Section = OtherTab:AddSection({
+    Name = "Inf Money"
+   })
+
+   OtherTab:AddButton({
+    Name = "Inf Money!"
+    Callback = function
+        local args = {
+            [1] = 999999999999999999
+        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("fewjnfejwb3"):FireServer(unpack(args))
+   })
+
+
 OrionLib:Init()

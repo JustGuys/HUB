@@ -111,25 +111,23 @@ local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, 
    })
 
 
-
+   
    local OtherTab = Window:MakeTab({
-    Name = "Million Tycoon",
+    Name = "Million Air",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
    })
    
    local Section = OtherTab:AddSection({
-    Name = "Inf Money"
+    Name = "Main"
    })
-
+   
+   
    OtherTab:AddButton({
-    Name = "Inf Money!"
-    Callback = function
-        local args = {
-            [1] = 999999999999999999
-        }
-
-        game:GetService("ReplicatedStorage"):WaitForChild("fewjnfejwb3"):FireServer(unpack(args))
+    Name = "INF MONEY",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JustGuys/Million-Air-Tycooh/main/inf%20money"))()
+    end    
    })
 
 

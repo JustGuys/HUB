@@ -1,4 +1,3 @@
-if game.PlaceId == 286090429 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "GuysModz Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "GuysModz"})
 
@@ -50,28 +49,60 @@ Tab:AddButton({
 })
 
 
-if gameId == 286090429  
    --other tab
    
    local OtherTab = Window:MakeTab({
-    Name = "Other",
+    Name = "pet simulator 99",
     Icon = "rbxassetid://4483345998",
     PremiumOnly = false
    })
    
    local Section = OtherTab:AddSection({
-    Name = "Other"
+    Name = "Scripts"
    })
    
    
    OtherTab:AddButton({
-    Name = "",
+    Name = "Gui 1",
     Callback = function()
-          game.Workspace.Doors:Destroy()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lenutjr/lenut/main/scripts"))()
+    end    
+   })
+
+   OtherTab:AddButton({
+    Name = "Gui 2",
+    Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
       end    
    })
-   
-   
-end
-OrionLib:Init()
 
+   OtherTab:AddButton({
+    Name = "Gui 3",
+    Callback = function()
+        local old
+        old = hookfunction(game.HttpGet, function(...)
+           local args = {...}
+           local url = args[2]
+           if url:match('testingkey') and url:match('verify') then
+               return 'valid'
+           end
+           return old(...)
+        end)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lxnnydev/Delta-PSX/main/loader.lua"))()
+      end    
+   })
+
+   OtherTab:AddButton({
+    Name = "Gui 4",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "GuysModz",
+            Content = "COMING SOON!!!!",
+            Image = "rbxassetid://4483345998",
+            Time = 10
+        })
+      end    
+   })
+
+
+   OrionLib:Init()
